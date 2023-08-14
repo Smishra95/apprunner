@@ -1,0 +1,71 @@
+version: 1.0
+runtime: nodejs16
+build:
+  commands:
+    build:
+      - npm install -g @pnpm/exe
+      - pnpm install
+      - pnpm build
+run:
+  command: pnpm start
+  network:
+    port: 3000
+  env:
+    - name: TZ
+      value: "UTC"
+    - name: PUBLIC_URL
+      value: "http://localhost:3000"
+    - name: PUBLIC_SERVER_URL
+      value: "http://localhost:3100"
+    - name: PUBLIC_GOOGLE_CLIENT_ID
+      value: "abc"
+    - name: POSTGRES_DB
+      value: "postgres"
+    - name: POSTGRES_USER
+      value: "postgres"
+    - name: POSTGRES_PASSWORD
+      value: "postgres"
+    - name: SECRET_KEY
+      value: "abc"
+    - name: POSTGRES_HOST
+      value: "localhost"
+    - name: POSTGRES_PORT
+      value: "5432"
+    - name: POSTGRES_SSL_CERT
+      value: "abc"
+    - name: JWT_SECRET
+      value: "abc"
+    - name: JWT_EXPIRY_TIME
+      value: "604800"
+    - name: GOOGLE_CLIENT_SECRET
+      value: "abc"
+    - name: GOOGLE_API_KEY
+      value: "abc"
+    - name: MAIL_FROM_NAME
+      value: "abc"
+    - name: MAIL_FROM_EMAIL
+      value: "abc"
+    - name: MAIL_HOST
+      value: "abc"
+    - name: MAIL_PORT
+      value: "abc"
+    - name: MAIL_USERNAME
+      value: "abc"
+    - name: MAIL_PASSWORD
+      value: "abc"
+    - name: STORAGE_BUCKET
+      value: "abc"
+    - name: STORAGE_REGION
+      value: "abc"
+    - name: STORAGE_ENDPOINT
+      value: "abc"
+    - name: STORAGE_URL_PREFIX
+      value: "abc"
+    - name: STORAGE_ACCESS_KEY
+      value: "abc"
+    - name: STORAGE_SECRET_KEY
+      value: "abc"
+    - name: PDF_DELETION_TIME
+      value: "345600000"
+    - name: PUBLIC_FLAG_DISABLE_SIGNUPS
+      value: "false"
